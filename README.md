@@ -64,24 +64,6 @@ Explodd est une application web moderne de gestion et partage de fichiers, conç
 - **Prévisualisation intégrée** - Visualisez vos images sans les télécharger
 - **Interface responsive** - Utilisable sur tous vos appareils
 
-<div align="center">
-  <img src="docs/images/explorer.png" alt="Interface principale" width="800"/>
-</div>
-
-<div align="center">
-  <img src="docs/images/partage.png" alt="Partage de fichiers" width="600"/>
-</div>
-
-<div align="center">
-  <img src="docs/images/Parametre.png" alt="Gestion des utilisateurs" width="800"/>
-</div>
-
-## 📊 Statistiques et gestion des utilisateurs
-
-<div align="center">
-  <img src="docs/images/stats.png" alt="Statistiques" width="800"/>
-</div>
-
 ## 🚀 Installation
 
 ### Installation classique
@@ -128,14 +110,28 @@ En mode Docker, la configuration se fait directement via :
 
 ## 📸 Captures d'écran
 
+### Interface principale
 <div align="center">
-  <img src="./docs/screenshots/main-view.png" alt="Vue principale" width="800"/>
-  *Vue principale de l'application avec la grille de fichiers*
+  <img src="docs/images/explorer.png" alt="Interface principale" width="800"/>
+  <p><em>Vue principale de l'application avec la grille de fichiers</em></p>
 </div>
 
+### Partage de fichiers
 <div align="center">
-  <img src="./docs/screenshots/mobile-view.png" alt="Vue mobile" width="600"/>
-  *Interface mobile avec menu d'actions*
+  <img src="docs/images/partage.png" alt="Partage de fichiers" width="600"/>
+  <p><em>Interface de partage de fichiers avec options de sécurité</em></p>
+</div>
+
+### Gestion des utilisateurs
+<div align="center">
+  <img src="docs/images/Parametre.png" alt="Gestion des utilisateurs" width="800"/>
+  <p><em>Panneau de configuration des utilisateurs et permissions</em></p>
+</div>
+
+### Statistiques d'utilisation
+<div align="center">
+  <img src="docs/images/stats.png" alt="Statistiques" width="800"/>
+  <p><em>Visualisation de l'espace disque utilisé par utilisateur</em></p>
 </div>
 
 ## Contribuer

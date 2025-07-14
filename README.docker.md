@@ -115,6 +115,8 @@ docker-compose up --build
 docker-compose up -d --build
 ```
 
+> **Note importante** : Lors du premier démarrage, l'application peut prendre quelques minutes pour initialiser la base de données et indexer les fichiers. Pendant ce temps, l'interface peut paraître lente ou peu réactive. Après cette phase d'initialisation, l'application devient fluide et réactive.
+
 ### Exécutions suivantes
 
 ```bash

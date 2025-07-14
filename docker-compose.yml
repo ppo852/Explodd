@@ -16,6 +16,11 @@ services:
       - ./localfiles:/app/files/utilisateur
     environment:
       - NODE_ENV=production
+      # Définir l'utilisateur et groupe pour les processus dans le conteneur
+      - PUID=1000
+      - PGID=1000
+    # Utiliser un utilisateur spécifique pour exécuter le conteneur
+    user: "node"
     networks:
       - explodd-network
     restart: unless-stopped

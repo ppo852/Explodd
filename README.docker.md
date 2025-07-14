@@ -68,6 +68,11 @@ services:
       - ./localfiles:/app/files/utilisateur
     environment:
       - NODE_ENV=production
+      # Définir l'utilisateur et groupe pour les processus dans le conteneur
+      - PUID=1000
+      - PGID=1000
+    # Utiliser un utilisateur spécifique pour exécuter le conteneur
+    user: "node"
     networks:
       - explodd-network
     restart: unless-stopped
@@ -175,7 +180,45 @@ Si le frontend ne peut pas accéder au backend, vérifiez :
 
 ### Problèmes d'accès aux fichiers
 
-Assurez-vous que les chemins de montage dans docker-compose.yml sont corrects et que les permissions sont bien configurées.
+La gestion des droits d'accès est importante pour éviter les problèmes de permissions entre le conteneur Docker et le système hôte.
+
+#### Configuration des droits utilisateur
+
+Dans le fichier `docker-compose.yml`, nous utilisons les paramètres suivants pour gérer les droits :
+
+```yaml
+environment:
+  # Définir l'utilisateur et groupe pour les processus dans le conteneur
+  - PUID=1000
+  - PGID=1000
+# Utiliser un utilisateur spécifique pour exécuter le conteneur
+user: "node"
+```
+
+- `PUID=1000` et `PGID=1000` : Définissent l'ID utilisateur et l'ID groupe à utiliser dans le conteneur (1000 correspond généralement au premier utilisateur non-root sur les systèmes Linux)
+- `user: "node"` : Spécifie que le conteneur doit s'exécuter avec l'utilisateur `node` au lieu de `root`
+
+#### Ajustement des permissions
+
+Si vous rencontrez des problèmes de permissions, vous pouvez :
+
+1. Ajuster les valeurs PUID et PGID pour qu'elles correspondent à votre utilisateur local :
+   ```bash
+   # Sur Linux/macOS, trouvez votre UID et GID
+   id
+   ```
+
+2. Modifier les permissions des dossiers montés :
+   ```bash
+   # Donner les droits d'accès complets aux dossiers de données
+   chmod -R 777 ./data ./localfiles
+   ```
+
+3. Créer les dossiers avec les bonnes permissions avant de démarrer le conteneur :
+   ```bash
+   mkdir -p ./data ./localfiles
+   chown -R 1000:1000 ./data ./localfiles
+   ```
 
 ### Erreur "port already in use"
 

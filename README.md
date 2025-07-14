@@ -53,14 +53,33 @@ Explodd est une application web moderne de gestion et partage de fichiers, conç
 - **Docker** : Conteneurisation de l'application pour un déploiement simplifié
 - **Nginx** : Serveur web haute performance pour servir l'application frontend
 
-## 📊 Statistiques et gestion des utilisateurs
+## ✨ Fonctionnalités
+
+- **Interface utilisateur moderne** - Navigation fluide et intuitive
+- **Gestion des utilisateurs** - Contrôle d'accès et permissions personnalisables
+- **Partage de fichiers** - Liens temporaires protégés par mot de passe
+- **Statistiques d'utilisation** - Visualisation de l'espace disque utilisé
+- **Recherche avancée** - Trouvez rapidement vos fichiers
+- **Filtrage intelligent** - Par type, date, taille, etc.
+- **Prévisualisation intégrée** - Visualisez vos images sans les télécharger
+- **Interface responsive** - Utilisable sur tous vos appareils
 
 <div align="center">
-  <img src="./docs/images/stats.png" alt="Statistiques" width="800"/>
+  <img src="docs/images/explorer.png" alt="Interface principale" width="800"/>
 </div>
 
 <div align="center">
-  <img src="./docs/images/user-management.png" alt="Gestion des utilisateurs" width="800"/>
+  <img src="docs/images/partage.png" alt="Partage de fichiers" width="600"/>
+</div>
+
+<div align="center">
+  <img src="docs/images/Parametre.png" alt="Gestion des utilisateurs" width="800"/>
+</div>
+
+## 📊 Statistiques et gestion des utilisateurs
+
+<div align="center">
+  <img src="docs/images/stats.png" alt="Statistiques" width="800"/>
 </div>
 
 ## 🚀 Installation

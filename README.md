@@ -90,23 +90,11 @@ npm run start
 Voir le fichier [README.docker.md](./README.docker.md) pour les instructions détaillées sur le déploiement avec Docker.
 
 ## ⚙️ Configuration
-
-### Environnement standard
-
-Le fichier `.env` à la racine du projet et le fichier `server/.env` permettent de configurer différents aspects de l'application en mode développement ou déploiement standard :
-
-- Ports du serveur
-- Connexion à la base de données
-- Chemins de stockage des fichiers
-- Clés secrètes pour JWT
-- Et plus encore...
-
 ### Environnement Docker
 
 En mode Docker, la configuration se fait directement via :
 
 - Le fichier `docker-compose.yml` pour les variables d'environnement et la configuration des services
-- La variable d'environnement `EXPLODD_FILES_PATH` pour définir le chemin des fichiers à monter dans le conteneur
 
 ## 📸 Captures d'écran
 

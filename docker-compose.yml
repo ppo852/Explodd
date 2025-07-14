@@ -13,7 +13,7 @@ services:
       # Volume pour persister la base de données
       - ./data:/app/server/dist/data
       # Montage pour accéder aux fichiers locaux (à adapter selon vos besoins)
-      - ./localfiles:/app/files/adam
+      - ./localfiles:/app/files/utilisateur
     environment:
       - NODE_ENV=production
     networks:

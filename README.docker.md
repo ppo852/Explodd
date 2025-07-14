@@ -136,7 +136,7 @@ docker-compose down
 Les données sont persistantes grâce aux volumes Docker configurés dans le fichier docker-compose.yml :
 
 1. **Base de données SQLite** : Persistante via le montage `./data:/app/server/dist/data`
-2. **Fichiers utilisateurs** : Persistants via le montage `./localfiles:/app/files/adam`
+2. **Fichiers utilisateurs** : Persistants via le montage `./localfiles:/app/files/utilisateur`
 
 Pour supprimer complètement les données :
 

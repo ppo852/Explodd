@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Service monolithique (frontend + backend)
+  explodd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      # Port pour le frontend (qui inclut aussi le proxy vers le backend)
+      - "5173:80"
+    volumes:
+      # Volume pour persister la base de données
+      - ./data:/app/server/dist/data
+      # Montage pour accéder aux fichiers locaux (à adapter selon vos besoins)
+      - ./localfiles:/app/files/adam
+    environment:
+      - NODE_ENV=production
+    networks:
+      - explodd-network
+    restart: unless-stopped
+    
+networks:
+  explodd-network:
+    driver: bridge
+

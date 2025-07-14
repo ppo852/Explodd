@@ -1,0 +1,44 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "dev": "nodemon --exec ts-node index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/archiver": "^6.0.3",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/multer": "^2.0.0",
+    "@types/uuid": "^10.0.0",
+    "archiver": "^6.0.2",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^9.5.0",
+    "cors": "^2.8.5",
+    "diskusage": "^1.2.0",
+    "express": "^5.1.0",
+    "fs-extra": "^11.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.0.11",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

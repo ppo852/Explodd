@@ -1,0 +1,20 @@
+# Utiliser une image Node.js officielle comme base
+FROM node:20-alpine
+
+# Définir le répertoire de travail dans le conteneur
+WORKDIR /app
+
+# Copier les fichiers de dépendances
+COPY server/package.json server/package-lock.json* ./
+
+# Installer les dépendances (sans exécuter les scripts post-installation)
+RUN npm ci --ignore-scripts
+
+# Copier le reste des fichiers du serveur
+COPY server/ ./
+
+# Exposer le port sur lequel le serveur s'exécute
+EXPOSE 3000
+
+# Commande pour démarrer le serveur en mode production
+CMD ["node", "index.js"]
